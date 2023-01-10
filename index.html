@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./index.css"></link>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    </link>
     <title>Contador de Basket</title>
 </head>
 <body>
-    <section class="home">
-    <div class="cover">
+    <section class="fondo"> 
+        <button class="btn-reset" id="Reset" onclick="ResetGame()">Start New Game</button>
         <div class="tablero">
-        <h1></h1>
-            <div class="titulo"></div>
-            <button id="Reset" onclick="ResetGame()">Start New Game</button>
-        <h2>HOME</h2>
-            <h3 class="contador" id="contHome">0</h3>
-            <button id="AddPointHome" onclick="PointForHome()">+1</button>
-            <button id="AddPointDobleHome" onclick="DobleForHome()">+2</button>
-            <button id="AddPointTripleHome" onclick="TripleForHome()">+3</button>
-        <h2>GUEST</h2>
-            <h3 class="contador" id="contGuest">0</h3>
-            <button id="AddPointGuest" onclick="PointForGuest()">+1</button>
-            <button id="AddPointDobleHome" onclick="DobleForGuest()">+2</button>
-            <button id="AddPointTripleHome" onclick="TripleForGuest()">+3</button>
+            <div class="grupoEquipo">
+                <h2>HOME</h2>
+                <h3 class="contador" id="contHome">0</h3>
+                <div>
+                    <button class="ContadoresGuest" id="AddPointHome" onclick="PointForHome()">+1</button>
+                    <button class="ContadoresGuest" id="AddPointDobleHome" onclick="DobleForHome()">+2</button>
+                    <button class="ContadoresGuest" id="AddPointTripleHome" onclick="TripleForHome()">+3</button>
+                </div>
+            </div>
+            <div class="grupoEquipo">
+                <h2>GUEST</h2>
+                <h3 class="contador" id="contGuest">0</h3>
+                <div>
+                    <button class="ContadoresGuest" id="AddPointGuest" onclick="PointForGuest()">+1</button>
+                    <button class="ContadoresGuest" id="AddPointDobleHome" onclick="DobleForGuest()">+2</button>
+                    <button class="ContadoresGuest" id="AddPointTripleHome" onclick="TripleForGuest()">+3</button>
+                </div>
+            </div>
         </div>
-    </div>        
     </section>
-    <script src="./index.js"></script> 
-</body> 
+    <script src="./index.js"></script>
+</body>
 </html>
